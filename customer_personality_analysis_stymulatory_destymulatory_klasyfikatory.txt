@@ -1,0 +1,43 @@
+Dane (poza ID) są podzielone na trzy typy:
+	Stymulanty (im więcej tym lepiej)
+	Destymulanty (im mniej tym lepiej)
+	Klasyfikacyjne (pozwalające pogrupować klientów)
+
+    ID: Identyfikator klienta 
+    Year_Birth: Rok urodzenia klienta - Klasyfikacyjne 
+    Education: Poziom wykształcenia klienta - Klasyfikacyjne
+    Marital_Status: Stan cywilny klienta - Klasyfikacyjne
+    Income: Roczny przychód klienta - Stymulant(?) (więcej pieniędzy to większe potencjalne wydatki)
+    Kidhome: Ilość małych dzieci klienta - Klasyfikacyjne
+    Teenhome: Ilość nastoletnich dzieci klienta - Klasyfikacyjne
+    Dt_Customer: Data dołączenia do grona klientów - Klasyfikacyjne (bo pozwala stwierdzić czy np nowi/starzy klienci wydają mniej/więcej, ale nie wiemy jakie są tendencje, mamy je dopiero wykazać w analizie)
+    Recency: Ilość dni od ostatniego zakupu - Destymulant (im aktywniejszy klient tym lepiej)
+    Complain: 1 jeżeli w przeciągu ostatnich 2 lat klient złożył skargę, w przeciwnym razie 0
+
+
+    MntWines: Ilość pieniędzy wydanych na wino w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+    MntFruits: Ilość pieniędzy wydanych na owoce w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+    MntMeatProducts: Ilość pieniędzy wydanych na wyroby mięsne w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+    MntFishProducts: Ilość pieniędzy wydanych na wyroby rybne w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+    MntSweetProducts: Ilość pieniędzy wydanych na słodycze w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+    MntGoldProds: Ilość pieniędzy wydanych na złoto w przeciągu ostatnich 2 lat- stymulant (celem są jak największe wydatki)
+
+
+    NumDealsPurchases: Ilość zakupów na promocji - stymulant (oznacza 
+    AcceptedCmp1: 1 jeżeli klient skorzystał z pierwszej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+    
+    AcceptedCmp2: 1 jeżeli klient skorzystał z drugiej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+    
+    AcceptedCmp3: 1 jeżeli klient skorzystał z trzeciej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+    
+    AcceptedCmp4: 1 jeżeli klient skorzystał z czwartej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+    
+    AcceptedCmp5: 1 jeżeli klient skorzystał z piątej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+    
+    Response:1 jeżeli klient skorzystał z ostatniej kampanii promocyjnej, w przeciwnym razie 0 - stymulant (klient który często korzysta z promocji jest łatwiejszy do zmanipulowania przez promocje)
+
+    NumWebPurchases: Ilość zakupów przez stronę internetową - stymulant lub klasyfikator (wysoka liczba zakupów ogólnie jest po prostu dobra dla sklepu, ale można ją też porównywać z ilością zakupów z katalogu i ze sklepów fizycznych aby sprawdzić czy np. jeden z tych sposobów zakupów jest zdecydowanie mniej popularny (np. jeżeli zakupy w sklepie fizycznym są mało popularne można te sklepy zamknąć i przerobić na magazyny dla sklepu internetowego), oraz z ilością odwiedzin na stronie internetowej aby zweryfikować jaki procent potencjalnych klientów rzeczywiście coś kupuje
+    NumCatalogPurchases: Ilość zakupów z katalogu - stymulant lub klasyfikator: tak samo jak NumWebPurchases
+    NumStorePurchases: Ilość zakupów w sklepie fizycznym - stymulant lub klasyfikator: tak samo jak NumWebPurchases
+    NumWebVisitsMonth: Liczba odwiedzin na stronie internetowej sklepu w przeciągu ostatniego miesiąca- Stymulant lub Klasyfikator (wysoka liczba może być pozytywna oznaczając wysokie zainteresowanie sklepem, albo może być klasyfikatorem (wtedy można pogrupować klientów na tych bardziej i mniej zainteresowanych sklepem internetowym))
+

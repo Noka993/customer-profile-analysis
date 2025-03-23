@@ -1,0 +1,6 @@
+POL:
+zachowania klientów, wybory klientów,  osobowość klientów, sklep, sklep spożywczy, sklep online,   trendy rynkowe, strategia marketingowa, marketing, analiza demograficzna, analiza behawioralna, analiza osobowości, analiza danych, analiza skupień, klastrowanie, 
+
+ENG: 
+customer behaviour, customer choice, customer personality, store, grocery store, online store, market trends, marketing strategy, marketing, demographics analysis, behavioural analysis, personality analysis, data analysis, cluster analysis, clustering
+
