@@ -1,0 +1,11 @@
+Customer Segmentation Analysis for Amazon Data - Karthik Ramireddy - https://scholarworks.calstate.edu/downloads/wm117x269
+Praca magisterska o segmentacji klientów na platformie Amazon
+
+Customer personality analysis and clustering for targeted marketing - D. Acheme, E. Enoyoze - https://www.researchgate.net/publication/381943308_Customer_personality_analysis_and_clustering_for_targeted_marketing
+Analiza profilu klientów i klasteryzacja konsumentów za pomocą algorytmu k-śrenich
+
+Customer segmentation: The concepts of trust, commitment and relationships - B. Hulten - https://www.researchgate.net/publication/31963685_Customer_segmentation_The_concepts_of_trust_commitment_and_relationships
+Analiza wpływu zaangażowania i zaufania klientów w kontekście zastosowania praktycznego w marketingu
+
+The role of customer personality in satisfaction, attitude-to-brand and loyalty in mobile services - T. A. Smith - https://www.researchgate.net/publication/343285320_The_role_of_customer_personality_in_satisfaction_attitude-to-brand_and_loyalty_in_mobile_services
+Badanie profilów klientów w celu wyjaśnienia satysfakcji klientów
