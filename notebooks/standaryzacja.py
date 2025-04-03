@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 
+# Min-max, można spróbować
+# Opis metod i coś pokazać
 df = pd.read_csv("marketing_campaign.csv", sep='\t')
 
 
@@ -30,3 +32,6 @@ print("Średnie po standaryzacji:")
 print(df_scaled[columns_to_scale].mean())
 print("\nOdchylenia standardowe po standaryzacji:")
 print(df_scaled[columns_to_scale].std())
+
+for x in columns_to_scale:
+    print(df_scaled[x].head())
