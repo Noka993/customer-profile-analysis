@@ -22,7 +22,7 @@ def read_preprocessed_data():
     df["Dt_Customer"] = (reference_date - df["Dt_Customer"]).dt.days
 
     # Ujednolicenie statusów cywilnych
-    df["Living_With"] = df["Marital_Status"].replace(
+    df["Marital_Status"] = df["Marital_Status"].replace(
         {
             "Married": "Partner",
             "Together": "Partner",
