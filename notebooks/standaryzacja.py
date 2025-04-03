@@ -1,9 +1,11 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-
+import os
 
 # Min-max, można spróbować
 # Opis metod i coś pokazać
+base_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_dir, "../data/marketing_campaign.csv")
 df = pd.read_csv("marketing_campaign.csv", sep='\t')
 
 
@@ -17,7 +19,6 @@ columns_to_scale = [
     'NumDealsPurchases', 'NumWebPurchases', 'NumCatalogPurchases',
     'NumStorePurchases', 'NumWebVisitsMonth'
 ]
-
 
 
 scaler = StandardScaler()

@@ -1,9 +1,11 @@
-#Three lines to make our compiler able to draw:
 from main import read_preprocessed_data
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from yellowbrick.cluster import KElbowVisualizer
+import pandas as pd
 
-data = read_preprocessed_data().select_dtypes(include=['int', 'float']).dropna()
+data = read_preprocessed_data()
 inertias = []
 
 for i in range(1,11):
@@ -16,8 +18,12 @@ plt.title('Elbow method')
 plt.xlabel('Number of clusters')
 plt.ylabel('Inertia')
 plt.show()
-kmeans = KMeans(n_clusters=6)
-kmeans.fit(data)
 
-plt.show()
+# print('Elbow Method to determine the number of clusters to be formed:')
+# pca = PCA(n_components=3)
+# pca.fit(data)
+# PCA_ds = pd.DataFrame(pca.transform(data), columns=(["col1","col2", "col3"]))
+# Elbow_M = KElbowVisualizer(KMeans(), k=10)
+# Elbow_M.fit(PCA_ds)
+# Elbow_M.show()
 
