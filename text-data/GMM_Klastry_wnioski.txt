@@ -1,0 +1,40 @@
+Dla trzech klastrów:
+
+	Klaster 0:
+		-Największe zarobki ze wszystkich
+		-Średnio najwięcej małych dzieci, i dzieci w ogóle
+		-Mają kilka razy niższe zarobki ale nawet kilkanaście razy niższe wydatki
+		-W miarę zainteresowani promocjami, ale nie najbardziej ze wszystkich grup.
+		-Kupują głównie przez internet i stacjonarnie, praktycznie nie korzystają z katalogu, ale bardzo często odwiedzają stronę internetową
+		-Co ciekawe, rzadko korzystają z kampanii promocyjnych, oraz rzadko narzekają
+		-Najmłodsza grupa ze wszystkich
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		-Składają średnio najwięćej skarg
+		-Wydają relatywnie najmniej w sklepie, średnio 0.3% zarobków
+		-Najliczniejsza grupa (1096 osób)
+		Podsumowanie: Skrajnie oszczędni wcześni rodzice trudni do manipulacji poprzez akcje promocyjne oraz skorzy do skarżenia się na niedogodności
+		
+
+	Klaster 1:
+		-Najrzadziej mają dzieci, a jeżeli już to starsze
+		-Wydają najwięcej ze wszystkich grup na wszystkie produkty, ulubionym produktem jest wino, za nim ryby (w co może wliczać się kawior) i złoto
+		-Kupują stacjonarnie, z taką samą częstotliwością korzystają z katalogu i sklepu internetowego.
+		-Bardzo mało wchodzą na stronę internetową
+		-Bardzo chętni do brania udziału w kampaniach promocyjnych
+		-Wydają zdecydowanie najwięcej ze wszystkich grup, zarówno bewzględnie jak i procentowo (prawie 2% przychodów)
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		-Najmniej liczna grupa (446)
+		Podsumowanie: bogaci i/lub rozrzutni zblazowani bezdzietni (lub z już dorosłymi dziećmi)łatwi do zmanipulowania przez kampanie promocyjne
+	Klaster 2:
+		-Średnio najwięcej nastoletnich dzieci
+		-Przychody, wydatki na poszczególne produty jak i chęć korzystania z promocji pomiędzy pozostałymi klastrami	
+		-Wydatki ogólne zarówno bezwzględnie jak i procentowo pomiędzy dwoma pozostałymi klastrami
+		-Wydają najwięcej na wino, mięso i złoto
+		-Średnio najstarsi
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		Podsumowanie: Nieco starsi, ale poza tym bardzo "średni" klienci. Brak znaczących znaków szczególnych
+		
+		
+		
+	
+	
