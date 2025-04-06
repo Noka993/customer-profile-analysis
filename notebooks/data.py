@@ -1,10 +1,11 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import MinMaxScaler
 import os
 
 
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True, min_max=False):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -34,27 +35,31 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
         + df["MntGoldProds"]
     )
 
-    if std:
-        columns_to_scale = [
-            "Age",
-            "Income",
-            "Recency",
-            "MntWines",
-            "MntFruits",
-            "MntMeatProducts",
-            "MntFishProducts",
-            "MntSweetProducts",
-            "MntGoldProds",
-            "NumDealsPurchases",
-            "NumWebPurchases",
-            "NumCatalogPurchases",
-            "NumStorePurchases",
-            "NumWebVisitsMonth",
-            "Dt_Customer",
-            "Spent"
-        ]
+    columns_to_scale = [
+        "Age",
+        "Income",
+        "Recency",
+        "MntWines",
+        "MntFruits",
+        "MntMeatProducts",
+        "MntFishProducts",
+        "MntSweetProducts",
+        "MntGoldProds",
+        "NumDealsPurchases",
+        "NumWebPurchases",
+        "NumCatalogPurchases",
+        "NumStorePurchases",
+        "NumWebVisitsMonth",
+        "Dt_Customer",
+        "Spent"
+    ]
 
+    if std:
         scaler = StandardScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
+    if min_max:
+        scaler = MinMaxScaler()
         df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
         # df.to_csv("marketing_campaign_scaled.csv", index=False)
