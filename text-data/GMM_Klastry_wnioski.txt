@@ -1,7 +1,7 @@
 Dla trzech klastrów:
 
 	Klaster 0:
-		-Największe zarobki ze wszystkich
+		-Najmniejsze zarobki ze wszystkich
 		-Średnio najwięcej małych dzieci, i dzieci w ogóle
 		-Mają kilka razy niższe zarobki ale nawet kilkanaście razy niższe wydatki
 		-W miarę zainteresowani promocjami, ale nie najbardziej ze wszystkich grup.
@@ -33,8 +33,55 @@ Dla trzech klastrów:
 		-Średnio najstarsi
 		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
 		Podsumowanie: Nieco starsi, ale poza tym bardzo "średni" klienci. Brak znaczących znaków szczególnych
-		
+	
+Podsumowanie całości: Sklep powinien najbardziej skupić się i obserwować zachowania klientów z klastru numer 1, równocześnie mając na uwagę posiadanie stabilnej bazy klientów z klastru nr.2, zaś klienci z klastru numer 0 są dosyć trudni w utrzymaniu i mało dochodowi więc można ich w dużej mierze ignorować
 		
 		
 	
 	
+Dla czterech klastrów:
+	Klaster 0:
+		--Najmniejsze zarobki ze wszystkich
+		-Średnio najwięcej małych dzieci, i dzieci w ogóle
+		-Mają kilka razy niższe zarobki ale nawet kilkanaście razy niższe wydatki
+		-W miarę zainteresowani promocjami, ale nie najbardziej ze wszystkich grup.
+		-Kupują głównie przez internet i stacjonarnie, praktycznie nie korzystają z katalogu, ale bardzo często odwiedzają stronę internetową
+		-Co ciekawe, rzadko korzystają z kampanii promocyjnych, oraz rzadko narzekają
+		-Najmłodsza grupa ze wszystkich
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		-Składają średnio najwięćej skarg
+		-Wydają relatywnie najmniej w sklepie, średnio 0.3% zarobków
+		-Najliczniejsza grupa (1096 osób)
+		Podsumowanie: Skrajnie oszczędni wcześni rodzice trudni do manipulacji poprzez akcje promocyjne oraz skorzy do skarżenia się na niedogodności (wszystkie dane dokładnie tak samo jak w wypadku trzech klastrów)
+		
+		
+	Klaster 1:
+		-Najczęśćiej ze wszystkich grup mają nastoletnie dzieci
+		-Najwięcej wydają na wino, mięso i złoto
+		-Najczęściej ze wszystkich grup korzystają z promocji i sklepu internetowego
+		-Druga najczęściej wchodząca na stronę internetową grupa
+		-Bardzo chętnie korzystają z kampanii promocyjnych
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		-Najmniej liczna grupa (311)
+		Podsumowanie: Średnio zamożni i chętnie korzystający z promocji starsi rodzice (z pewnym potencjałem na dołączenie pod względem przyzwyczajeń do klastru 20
+		
+	Klaster 2:
+		-Najrzadziej mają dzieci, a jeżeli już to starsze
+		-Wydają najwięcej ze wszystkich grup na wszystkie produkty, ulubionym produktem jest wino, za nim ryby (w co może wliczać się kawior) i złoto
+		-Kupują stacjonarnie, z taką samą częstotliwością korzystają z katalogu i sklepu internetowego.
+		-Bardzo mało wchodzą na stronę internetową
+		-Bardzo chętni do brania udziału w kampaniach promocyjnych
+		-Wydają zdecydowanie najwięcej ze wszystkich grup, zarówno bewzględnie jak i procentowo (prawie 2% przychodów)
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		Podsumowanie: bogaci i/lub rozrzutni zblazowani bezdzietni (lub z już dorosłymi dziećmi)łatwi do zmanipulowania przez kampanie promocyjne
+	
+	Klaster 3:
+		-Mają mniej dzieci niż klaster 1, z tą samą tendencją (dzieci raczej w wieku nastoletnim)
+		-Składają średnio  najwięcej zamówień (łącznie ze wszystkich źródeł)
+		-Najwyższe zainteresowanie niektórymi promocjami, znikome innymi
+		-Druga najwyższa średnia ilość skarg
+		-Druga najwyższa proporcja wydatków do zarobków
+		-Tak jak pozostałe grupy, najczęściej mają za sobą edukację na poziomie licencjatu, oraz są w związku
+		Podsumowanie:Części zakupowicze o wyrobionych preferencjach (więc nie łapią byle promocji, ale jeżeli promocja dotyczy produktu który i tak kupują to wezmą w niej bardzo czynny udział), mają potencjał na bycie bardzo dochodowymi jeżeli będzie się organizować
+
+Podsumowanie całości: Sklep powinien pielęgnować relację z bardzo dochodowymi klientami z klastru nr.2 oraz bardzo skupiać się na preferencjach klientów z klastru nr.3 i monitorować zachowania klientów z klastru nr.1 kierując ich w kierunku zachowań klientów z klastru nr.2. Klienci z klastru numer 0 są dosyć trudni w utrzymaniu i mało dochodowi więc można ich w dużej mierze ignorować
