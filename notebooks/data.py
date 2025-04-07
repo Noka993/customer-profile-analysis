@@ -54,6 +54,8 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
         "Spent"
     ]
 
+    df = remove_outliers(df)
+
     if std:
         scaler = StandardScaler()
         df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
@@ -106,8 +108,6 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
         LE = LabelEncoder()
         for i in object_cols:
             df[i] = df[[i]].apply(LE.fit_transform)
-    
-    print(df.head)
 
     return df
 
@@ -158,6 +158,6 @@ def remove_outliers(df2):
 
 if __name__ == "__main__":
     df = read_preprocessed_data()
-    print(df["Age"].head())
+    print(df.info())
 
 
