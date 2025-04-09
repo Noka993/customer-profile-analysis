@@ -1,4 +1,3 @@
-from sys import stdin
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
@@ -6,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 import os
 
 
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False ,le=True, he=False):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True, min_max=False):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -14,9 +13,7 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
     df = pd.read_csv(file_path, sep="\t")
 
     # Brakujące dane
-    #l=len(df)
     df = df.dropna()
-    #print(l-len(df))
 
     # Bierzemy 2021, bo wtedy był ostatnio modyfikowany plik
     df["Age"] = 2021 - df["Year_Birth"]
@@ -59,6 +56,16 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
 
     df = remove_outliers(df)
 
+    if std:
+        scaler = StandardScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
+    if min_max:
+        scaler = MinMaxScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
+        # df.to_csv("marketing_campaign_scaled.csv", index=False)
+
     # Ujednolicenie statusów cywilnych
     df["Marital_Status"] = df["Marital_Status"].replace(
         {
@@ -83,30 +90,7 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
         }
     )
 
-    if he:
-        # Dane kategoryczne, one hot encoding
-        s = df.dtypes == "object"
-        object_cols = list(s[s].index)
-
-        # Przekształcamy na dane numeryczne
-        df = pd.get_dummies(df, columns=object_cols)
-    
-    if le:
-        le = LabelEncoder()
-        s = df.dtypes == "object"
-        object_cols = list(s[s].index)
-
-        for col in object_cols:
-            df[col] = le.fit_transform(df[col])
-
-    if std:
-        scaler = StandardScaler()
-        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
-
-    if minmax:
-        scaler = MinMaxScaler()
-        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
-
+    # Usuwamy kolumny, których nie potrzebujemy do analizy
     del (
         df["Z_CostContact"],
         df["Z_Revenue"],
@@ -114,6 +98,16 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
         df["Year_Birth"],
         df["Dt_Customer"],
     )
+
+    if le:
+        # Dane kategoryczne
+        s = df.dtypes == "object"
+        object_cols = list(s[s].index)
+
+        # Przekształcamy na dane numeryczne
+        LE = LabelEncoder()
+        for i in object_cols:
+            df[i] = df[[i]].apply(LE.fit_transform)
 
     return df
 
@@ -160,8 +154,31 @@ def remove_outliers(df2):
     cleaned_df=df.dropna()
 
     return cleaned_df
-
-
+def general_statistics(df):
+    stat_cols = [col for col in df.columns if df[col].nunique()>9]
+    num_cols = pd.DataFrame(df,columns= stat_cols)#df.select_dtypes(include=['int', 'float'])
+    statystyki = {
+    'Średnia':num_cols.mean(),
+    'Mediana':num_cols.median(),
+    'Minimum':num_cols.min(),
+    'Maksimum':num_cols.max(),
+    'Odchylenie Standardowe':num_cols.std(),
+    'Skośność':num_cols.skew()
+    }
+    return statystyki
+def jaccard_res(df1,df2):
+    
+    jaccard_values = []
+    
+    for c1 in clusters1.columns:
+        for c2 in clusters2.columns:
+            intersection = len(c1.intersection(c2))
+            union = len(c1.union(c2))
+            if union > 0:  
+                jaccard_values.append(intersection / union)
+    
+    # Return the maximum Jaccard index (best matching)
+    return max(jaccard_values) if jaccard_values else 0.0
 if __name__ == "__main__":
     df = read_preprocessed_data()
     print(df.info())
