@@ -1,0 +1,53 @@
+Klaster 0: Premium - Zamożni Singli
+    • Średni wiek: 54 lata
+    • Dochód: 62 221 $
+    • Stan cywilny: głównie single
+    • Dzieci: bardzo mało (0.04 małych, 0.47 nastolatków)
+    • Wydatki: 926 (wino 456, mięso 261 $)
+    • Zakupy: częste katalogowe (3.95) i stacjonarne (7.44)
+    • Responsywność na kampanie: 24.5% (najwyższa)
+    • Liczba klientów: 428
+    • Podsumowanie: Najbardziej wartościowa grupa, preferuje produkty premium
+Klaster 1: Oszczędne Rodziny
+    • Średni wiek: 47 lat (najmłodsi)
+    • Dochód: 32 901 $ (najniższy)
+    • Stan cywilny: głównie pary
+    • Dzieci: najwięcej (0.88 małych, 0.39 nastolatków)
+    • Wydatki: 107 $ (najmniej)
+    • Zakupy: głównie online (6.6 wizyt/miesiąc), mało katalogów (0.55)
+    • Responsywność na kampanie: 8.7% (najniższa)
+    • Liczba klientów: 608 (najwięcej)
+    • Podsumowanie: Wymaga najwięcej uwagi przy najmniejszych zyskach
+Klaster 2: Stabilni - Zamożne Pary
+    • Średni wiek: 54 lata
+    • Dochód: 69 423 $
+    • Stan cywilny: głównie pary
+    • Dzieci: bardzo mało (0.04 małych, 0.46 nastolatków)
+    • Wydatki: 1 132 $ (najwięcej)
+    • Zakupy: częste katalogowe (4.85) i stacjonarne (8.38)
+    • Responsywność na kampanie: 12.0%
+    • Liczba klientów: 491
+    • Podsumowanie: Najbardziej wydająca grupa, lojalni klienci
+Klaster 3: Średniozamożni - Rodziny z Nastolatkami
+    • Średni wiek: 54 lata
+    • Dochód: 44 760 $
+    • Stan cywilny: głównie pary
+    • Dzieci: sporo nastolatków (0.63 małych, 0.67 nastolatków)
+    • Wydatki: 274 $
+    • Zakupy: zrównoważone (online i stacjonarnie)
+    • Responsywność na kampanie: 11.1%
+    • Liczba klientów: 495
+    • Podsumowanie: Grupa o średnim potencjale, możliwości rozwoju
+Rekomendacje strategiczne:
+    1. Skupić się na Klasterze 0 i 2 (najbardziej dochodowe)
+    2. Ograniczyć koszty obsługi Klastera 1
+    3. Dla Klastera 3 wprowadzić program lojalnościowy
+    4. Klaster 0: oferty premium i ekskluzywne kampanie
+    5. Klaster 2: pakiety rodzinne i promocje
+    6. Klaster 1: automatyzacja obsługi
+    7. Klaster 3: promocje na produkty dla nastolatków
+Wnioski końcowe:
+    • 35% klientów (Klastry 0+2) generuje 70% przychodów
+    • Klaster 1 to grupa wymagająca optymalizacji kosztów
+    • Największy potencjał rozwoju w Klastrze 3
+    • Warto rozważyć różne strategie dla każdej grupy

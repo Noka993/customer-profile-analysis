@@ -1,115 +1,119 @@
 Dla 3 klastrów (raczej poprawne):
-    Klaster 0:
-    - niski (najniższy) dochód
-    - najwięcej dzieci (średnio 1,23 dziecka)
-    - ważne są dla nich promocje
-    - kupują zarówno stacjonarnie jak i online
-    - najwięcej wizyt na stronie (przeglądają, ale stosunkowo mało kupują)
-    - ich zakupy nie zależą od kampanii reklamowych
-    - są stosunkowo najmłodszą grupą
-    - większość jest w związku
-    - niskie wydatki
-    - są grupą, która składa najwięcej reklamacji
-    - kupują głównie produkty podstawowe
-    - edukacja wyższa (licencjat)
-    - liczność: 1047
-    Podsumowanie: Oszczędne rodziny z dziećmi
+    Klaster 0: Średniozamożne rodziny z nastolatkami
+        • Średni wiek: 55.7 lat
+        • Dochód: 57 713 $
+        • Dzieci: 0.20 małych, 0.85 nastolatków
+        • Wydatki: 699 $
+        • Ulubione produkty: wino (434 ),mięso(133)
+        • Zakupy: częste w sklepach (7.78) i online (6.22)
+        • Responsywność na kampanie: 10.7%
+        • Liczba klientów: 534
+        • Wykształcenie: głównie magisterium
+        • Stan cywilny: w związku
+    Klaster 1: Oszczędne młode rodziny
+        • Średni wiek: 49.5 lat
+        • Dochód: 34 428 $ (najniższy)
+        • Dzieci: 0.77 małych, 0.45 nastolatków (najwięcej dzieci)
+        • Wydatki: 93 $ (najmniej)
+        • Zakupy: głównie online (6.35 wizyt/miesiąc)
+        • Responsywność: 9.1% (najniższa)
+        • Liczba klientów: 982 (najwięcej)
+        • Wykształcenie: głównie licencjat
+        • Stan cywilny: w związku
+    Klaster 2: Zamożni bezdzietni
+        • Średni wiek: 52.7 lat
+        • Dochód: 75 594 $ (najwyższy)
+        • Dzieci: 0.04 małych, 0.21 nastolatków (najmniej)
+        • Wydatki: 1 362 $ (najwięcej)
+        • Ulubione produkty: wino (580 ),mięso(446)
+        • Zakupy: częste katalogowe (5.78) i stacjonarne (8.47)
+        • Responsywność: 24.9% (najwyższa)
+        • Liczba klientów: 506
+        • Wykształcenie: głównie licencjat
+        • Stan cywilny: w związku
+    PODSUMOWANIE I REKOMENDACJE:
+        1. Klaster 2 to kluczowi klienci:
+        • Generują najwyższe przychody (średnio 1362 $ wydatków)
+        • Najlepiej reagują na kampanie marketingowe (24.9% responsywność)
+        • Warto inwestować w ekskluzywne oferty i programy lojalnościowe
+        2. Klaster 0 to stabilna baza klientów:
+        • Średnie wskaźniki w większości kategorii
+        • Dobrze reagują na kampanie (10.7%)
+        • Proponować zrównoważone pakiety produktów
+        3. Klaster 1 wymaga optymalizacji:
+        • Najmniej wydają przy największej liczebności
+        • Niska responsywność na promocje
+        • Skupić się na podstawowych produktach w niskich cenach
+    WNIOSKI KOŃCOWE:
+        • 20% klientów (Klaster 2) generuje około 50% przychodów
+        • Największy potencjał rozwoju w Klatrze 0
+        • Klaster 1 to grupa wymagająca obniżenia kosztów obsługi
+        • Dla każdej grupy potrzebne są odrębne strategie marketingowe
+        • Warto rozważyć różne kanały komunikacji dla każdego klastra
 
-    Klaster 1:
-    - najwyższy dochód
-    - bardzo mała liczba dzieci
-    - najwyższe wydatki, największa liczba transakcji
-    - najwięcej wydają na wino, mięso i ryby
-    - najczęściej kupują stacjonarnie i przez katalog
-    - rzadko odwiedzają stronę internetową
-    - najlepiej reagują na kampanie reklamowe
-    - większość z nich jest w związku
-    - składają najmniej reklamacji
-    - średni wiek 53 lata
-    - edukacja wyższa (licencjat)
-    - liczność: 564
-    Podsumowanie: Bogate pary kupujące towary wyższej klasy
-
-    Klaster 2:
-    - średni dochód i średnie wydatki
-    - największa liczba nastolatków, umiarkowana dzieci
-    - najkrótszy średni czas od ostatnich zakupów
-    - najwięcej wydają na wino, mięso i złoto
-    - większość w związku
-    - najstarsza grupa
-    - najwięcej zakupów dokonują stacjonarnie i online
-    - średnia skłonność do reklamacji
-    - grupa z najwyższym poziomem edukacji - wyższy (magister)
-    - liczność: 605
-    Podsumowanie: Średniozamożne starsze małżeństwa 
 
 Dla 4 klastrów (3 chyba lepsze wg. metody łokcia): 
-    Klaster 0: "Stabilne rodziny z nastolatkami" (289 osób)
-        Dochód: Średni (~49 261)
-        Gospodarstwo domowe:
-            Umiarkowana liczba dzieci (0.57)
-            Najwięcej nastolatków (0.91)
-        Zachowania zakupowe:
-            Średnie wydatki (484), głównie na wino (302) i mięso (91)
-            Często korzystają z promocji (5.5 transakcji)
-            Równowaga między zakupami online (6.02) i stacjonarnymi (5.92)
-        Reakcja na marketing:
-            Umiarkowana reakcja na kampanie (17.6% response rate)
-        Demografia:
-            Średni wiek (55 lat)
-            Wykształcenie wyższe (licencjat)
-            Większość w związkach
-        Podsumowanie: Rodziny z nastolatkami, stabilne dochody, umiarkowane wydatki. Wrażliwi na promocje.
-
-    Klaster 1: "Zamożni koneserzy" (473 osoby)
-        Dochód: Najwyższy (~78 511)
-        Gospodarstwo domowe:
-            Praktycznie brak dzieci (0.03)
-            Niewiele nastolatków (0.18)
-        Zachowania zakupowe:
-            Najwyższe wydatki (1451), głównie na wino (607), mięso (499) i produkty premium
-            Preferują zakupy katalogowe (6.3) i stacjonarne (8.29)
-            Rzadko odwiedzają stronę (2.7 wizyt/miesiąc)
-        Reakcja na marketing:
-            Najlepsza reakcja na kampanie (28.8% response rate)
-        Demografia:
-            Nieco młodsi (52 lata)
-            Wykształcenie wyższe (licencjat)
-            Większość w związkach
-        Podsumowanie: Zamożni klienci premium, lojalni wobec marek wysokiej jakości.
-
-    Klaster 2: "Dojrzałe pary lubiące wino" (468 osób)
-        Dochód: Wyższy średni (~64 346)
-        Gospodarstwo domowe:
-            Mało dzieci (0.1)
-            Sporo nastolatków (0.72)
-        Zachowania zakupowe:
-            Wysokie wydatki (920), szczególnie na wino (566) i mięso (186)
-            Częste zakupy stacjonarne (8.74) i online (6.28)
-            Umiarkowane korzystanie z katalogów (3.93)
-        Reakcja na marketing:
-            Najlepiej reagują na Cmp4 (15%)
-            Umiarkowany response rate (13%)
-        Demografia:
-            Najstarsi (średnio 56 lat)
-            Wykształcenie magisterskie
-            Większość w związkach
-        Podsumowanie: Dojrzałe pary o ugruntowanych preferencjach, lubiące wino i tradycyjne zakupy.
-
-    Klaster 3: "Oszczędne rodziny z małymi dziećmi" (986 osób)
-        Dochód: Najniższy (~34 781)
-        Gospodarstwo domowe:
-            Najwięcej dzieci (0.77)
-            Umiarkowana liczba nastolatków (0.44)
-        Zachowania zakupowe:
-            Najniższe wydatki (90)
-            Głównie zakupy stacjonarne (3.18)
-            Najwięcej wizyt na stronie (6.35), ale mało zakupów online
-        Reakcja na marketing:
-            Praktycznie brak reakcji na kampanie
-            Najwięcej reklamacji (1.2%)
-        Demografia:
-            Najmłodsi (średnio 50 lat)
-            Wykształcenie wyższe (licencjat)
-            Większość w związkach
-        Podsumowanie: Rodziny z małymi dziećmi, niskie wydatki, skupione na podstawowych potrzebach.
+    Klaster 0: Rodziny z nastolatkami
+        • Średni wiek: 55 lat
+        • Dochód: 61 240 $
+        • Dzieci: 0.14 małych, 0.80 nastolatków
+        • Wydatki: 849 $
+        • Ulubione produkty: wino (523 ),mięso(163)
+        • Zakupy: częste w sklepach (8.46) i online (6.67)
+        • Responsywność na kampanie: 11.5%
+        • Liczba klientów: 435
+        • Edukacja: głównie licencjat
+        • Stan cywilny: w związku
+    Klaster 1: Oszczędne młode rodziny
+        • Średni wiek: 44 lata (najmłodsi)
+        • Dochód: 30 052 $ (najniższy)
+        • Dzieci: 0.85 małych, 0.22 nastolatków
+        • Wydatki: 71 $ (najmniej)
+        • Zakupy: głównie online (6.75 wizyt/miesiąc)
+        • Responsywność: 10.2%
+        • Liczba klientów: 640 (najwięcej)
+        • Edukacja: głównie licencjat
+        • Stan cywilny: w związku
+    Klaster 2: Zamożni bezdzietni
+        • Średni wiek: 53 lata
+        • Dochód: 76 218 $ (najwyższy)
+        • Dzieci: 0.02 małych, 0.18 nastolatków (najmniej)
+        • Wydatki: 1 385 $ (najwięcej)
+        • Ulubione produkty: wino (579 ),mięso(465)
+        • Zakupy: częste katalogowe (5.86) i stacjonarne (8.52)
+        • Responsywność: 24.8% (najwyższa)
+        • Liczba klientów: 463
+        • Edukacja: głównie licencjat
+        • Stan cywilny: w związku
+    Klaster 3: Starsze rodziny
+        • Średni wiek: 59 lat (najstarsi)
+        • Dochód: 44 868 $
+        • Dzieci: 0.55 małych, 0.89 nastolatków (najwięcej)
+        • Wydatki: 203 $
+        • Zakupy: zrównoważone (online i stacjonarnie)
+        • Responsywność: 8.7%
+        • Liczba klientów: 484
+        • Edukacja: głównie magisterium
+        • Stan cywilny: w związku
+    WNIOSKI I REKOMENDACJE:
+        1. Klaster 2 to najbardziej wartościowi klienci:
+        • Najwyższe zarobki i wydatki
+        • Najlepiej reagują na kampanie
+        • Warto inwestować w ekskluzywne oferty dla tej grupy
+        2. Klaster 1 wymaga optymalizacji kosztów:
+        • Najmniej wydają, choć są najliczniejsi
+        • Niska responsywność na promocje
+        • Proponować podstawowe produkty w niskich cenach
+        3. Klaster 0 to stabilna grupa:
+        • Średnie wskaźniki w większości kategorii
+        • Dobrze reagują na kampanie
+        • Warto utrzymywać obecną strategię
+        4. Klaster 3 to grupa specjalistyczna:
+        • Starsze rodziny z nastolatkami
+        • Średnie wydatki, ale specyficzne potrzeby
+        • Proponować produkty dla rodzin z nastolatkami
+    PODSUMOWANIE:
+        • 30% klientów (Klastry 2) generuje 50% przychodów
+        • Największy potencjał rozwoju w Klastrze 0 i 2
+        • Klaster 1 wymaga najwięcej uwagi przy optymalizacji kosztów
+        • Dla każdej grupy potrzebne są różne strategie marketingowe
