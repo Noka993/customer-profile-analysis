@@ -1,0 +1,4 @@
+Do przekształcania danych kategorycznych na wartości liczbowe używamy techniki One-Hot Encoding, która działa w następujący sposób:
+1. Tworzenie nowych kolumn: Dla każdej unikalnej wartości w kolumnie kategorycznej tworzona jest nowa kolumna. 
+2. Zamiana wartości na 0 i 1: W każdej z nowo utworzonych kolumn wstawiamy wartość 1 (gdy dany rekord ma tę kategorię) lub 0 (gdy nie ma tej kategorii). 
+W ten sposób każda kategoria zostaje reprezentowana jako zestaw binarnych kolumn (0 lub 1).

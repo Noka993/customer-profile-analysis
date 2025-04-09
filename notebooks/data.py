@@ -1,3 +1,4 @@
+from sys import stdin
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
@@ -5,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 import os
 
 
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True, min_max=False):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False ,le=True, he=False):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -56,16 +57,6 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
 
     df = remove_outliers(df)
 
-    if std:
-        scaler = StandardScaler()
-        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
-
-    if min_max:
-        scaler = MinMaxScaler()
-        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
-
-        # df.to_csv("marketing_campaign_scaled.csv", index=False)
-
     # Ujednolicenie statusów cywilnych
     df["Marital_Status"] = df["Marital_Status"].replace(
         {
@@ -90,7 +81,30 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
         }
     )
 
-    # Usuwamy kolumny, których nie potrzebujemy do analizy
+    if he:
+        # Dane kategoryczne, one hot encoding
+        s = df.dtypes == "object"
+        object_cols = list(s[s].index)
+
+        # Przekształcamy na dane numeryczne
+        df = pd.get_dummies(df, columns=object_cols)
+    
+    if le:
+        le = LabelEncoder()
+        s = df.dtypes == "object"
+        object_cols = list(s[s].index)
+
+        for col in object_cols:
+            df[col] = le.fit_transform(df[col])
+
+    if std:
+        scaler = StandardScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
+    if minmax:
+        scaler = MinMaxScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
     del (
         df["Z_CostContact"],
         df["Z_Revenue"],
@@ -98,16 +112,6 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, le=True
         df["Year_Birth"],
         df["Dt_Customer"],
     )
-
-    if le:
-        # Dane kategoryczne
-        s = df.dtypes == "object"
-        object_cols = list(s[s].index)
-
-        # Przekształcamy na dane numeryczne
-        LE = LabelEncoder()
-        for i in object_cols:
-            df[i] = df[[i]].apply(LE.fit_transform)
 
     return df
 
