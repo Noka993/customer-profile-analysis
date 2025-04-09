@@ -14,7 +14,9 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
     df = pd.read_csv(file_path, sep="\t")
 
     # Brakujące dane
+    #l=len(df)
     df = df.dropna()
+    #print(l-len(df))
 
     # Bierzemy 2021, bo wtedy był ostatnio modyfikowany plik
     df["Age"] = 2021 - df["Year_Birth"]
