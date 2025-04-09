@@ -1,11 +1,10 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler, RobustScaler
 import os
 
 
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False ,le=True, he=False):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False, robust=False, le=True, he=False):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -102,6 +101,10 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
 
     if minmax:
         scaler = MinMaxScaler()
+        df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
+    if robust:
+        scaler = RobustScaler()
         df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
     del (
