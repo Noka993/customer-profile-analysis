@@ -1,0 +1,11 @@
+Projekt miał na celu segmentację klientów pewnego sklepu na podstawie danych demograficznych i zachowań zakupowych. 
+Wykorzystano zbiór danych "Customer Personality Analysis" (2240 rekordów) z Kaggle, analizując zarówno zmienne ciągłe (np. dochód, wydatki), 
+jak i kategoryczne (np. liczba dzieci, reakcje na kampanie).
+Dane zostały wstępnie przetworzone przy użyciu:
+standaryzacji
+normalizacji min-max
+skalowania RobustScaler (odpornego na wartości odstające)
+one-hot encoding dla zmiennych kategorycznych
+Do klasteryzacji zastosowano metody k-średnich i GMM (Gaussian Mixture Models), z optymalizacją liczby klastrów techniką łokcia. 
+Analiza pozwoliła wyodrębnić wyraźnie różniące się segmenty klientów, 
+co umożliwiło opracowanie spersonalizowanych rekomendacji marketingowych dostosowanych do charakterystyki każdej grupy.
