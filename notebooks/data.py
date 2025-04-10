@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder, MinMaxScaler, RobustScaler
 import os
 
 
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False, robust=False, le=True, he=False):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False, robust=False, le=True, he=False, outliers=True):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -53,7 +53,8 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
         "Spent"
     ]
 
-    df = remove_outliers(df)
+    if outliers:
+        df = remove_outliers(df)
 
     # Ujednolicenie statusów cywilnych
     df["Marital_Status"] = df["Marital_Status"].replace(
