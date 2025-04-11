@@ -1,0 +1,53 @@
+Klaster 0: Premium - Zamożni Partnerzy
+    Średni wiek: 54 lata
+    Dochód: 71 664 $
+    Stan cywilny: głównie partnerzy
+    Dzieci: bardzo mało (0.07 małych, 0.31 nastolatków)
+    Wydatki: 1 173 $ (wino 561 $, mięso 373 $)
+    Zakupy: bardzo częste katalogowe (5.25) i stacjonarne (8.82), online (5.39)
+    Responsywność na kampanie: 21.5%
+    Liczba klientów: 410
+    Podsumowanie: Lojalna i zamożna grupa, preferuje produkty premium, aktywna zakupowo
+Klaster 1: Oszczędne Rodziny z Dziećmi
+    Średni wiek: 49 lat (najmłodsi)
+    Dochód: 34 498 $ (najniższy)
+    Stan cywilny: głównie partnerzy
+    Dzieci: najwięcej (0.78 małych, 0.45 nastolatków)
+    Wydatki: 90 $ (najmniej)
+    Zakupy: głównie online (2.03), niskie katalogowe (0.52), dużo wizyt bez zakupu (6.33)
+    Responsywność na kampanie: 8.8%
+    Liczba klientów: 982 (najwięcej)
+    Podsumowanie: Grupa wymagająca niskokosztowych działań i optymalizacji obsługi
+Klaster 2: Rodziny z Nastolatkami
+    Średni wiek: 56 lat (najstarsi)
+    Dochód: 55 333 $
+    Stan cywilny: głównie partnerzy
+    Dzieci: sporo nastolatków (0.92), umiarkowanie małych dzieci (0.33)
+    Wydatki: 648 $
+    Zakupy: częste online (6.23), umiarkowane katalogowe (2.71), stacjonarne (7.16)
+    Responsywność na kampanie: 14.4%
+    Liczba klientów: 499
+    Podsumowanie: Grupa z dużym potencjałem zakupowym, szczególnie online
+Klaster 3: Najbardziej Wydająca Grupa
+    Średni wiek: 51 lat
+    Dochód: 74 641 $ (najwyższy)
+    Stan cywilny: głównie partnerzy
+    Dzieci: bardzo mało (0.05 małych, 0.28 nastolatków)
+    Wydatki: 1 397 $ (najwięcej)
+    Zakupy: częste katalogowe (5.56) i stacjonarne (8.43), online (5.49)
+    Responsywność na kampanie: 23.5% (najwyższa)
+    Liczba klientów: 247
+    Podsumowanie: Najbardziej wartościowa grupa – wysokie wydatki, dobra reakcja na kampanie
+Rekomendacje strategiczne:
+    Skupić się na Klastrze 3 i 0 (najwyższe wydatki i dochody)
+    Dla Klastera 1 – automatyzacja obsługi i tanie produkty
+    Klaster 2 – kampanie produktowe dla rodzin z nastolatkami
+    Klaster 3 – ekskluzywne oferty i program VIP
+    Klaster 0 – rozwój oferty premium, kampanie katalogowe
+    Klaster 1 – redukcja kosztów i optymalizacja konwersji online
+    Klaster 2 – lojalnościowe działania online i cross-selling
+Wnioski końcowe:
+    Klaster 3 i 0 odpowiadają za największe wydatki, mimo mniejszej liczby klientów
+    Klaster 1 – największy, ale najmniej dochodowy
+    Klaster 2 – potencjał wzrostu online i sprzedaży pakietowej
+    Personalizacja ofert według potrzeb każdej grupy zwiększy skuteczność działań
