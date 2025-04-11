@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler, RobustScaler
 import os
+import math
 
-
-def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False, robust=False, le=True, he=False, outliers=True):
+def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=False, robust=False, le=True, he=False, gmm=False):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(base_dir)
     file_path = os.path.join(root_dir, "data/", file_name)
@@ -53,8 +53,7 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
         "Spent"
     ]
 
-    if outliers:
-        df = remove_outliers(df)
+    df = remove_outliers(df)
 
     # Ujednolicenie statusów cywilnych
     df["Marital_Status"] = df["Marital_Status"].replace(
@@ -115,7 +114,10 @@ def read_preprocessed_data(file_name="marketing_campaign.csv", std=True, minmax=
         df["Year_Birth"],
         df["Dt_Customer"],
     )
-
+    if(gmm):
+        for col in df.columns:
+            if(len(df[col].unique())<9):
+                df.drop(col,axis=1)
     return df
 
 def outliers_statistics(df):
@@ -176,17 +178,59 @@ def general_statistics(df):
     return statystyki
 def jaccard_res(df1,df2):
     
-    jaccard_values = []
+   # df1= arg1.copy()
+   # df1['id'] = df1.index
+   # df1 = pd.DataFrame(df1, columns=['id','Cluster'])
+ #   df2= arg2.copy()
+  #  df2['id'] = df2.index
+   # df2 = pd.DataFrame(df2, columns=['id','Cluster'])
+    #for i in range(len(df1["Clusters"].unique())):
+     #   c1= = df1[df1['Clusters'] == i]
+      #  c2 = df2[df2["Clusters"==i]]
+   # overlap = pd.merge(c1, c2, how='inner')
+    union = pd.concat([df1, df2]).drop_duplicates()
+    overlap = pd.merge(df1, df2, how='inner').drop_duplicates()
+   # union = pd.concat([df1, df2]).drop_duplicates()
     
-    for c1 in clusters1.columns:
-        for c2 in clusters2.columns:
-            intersection = len(c1.intersection(c2))
-            union = len(c1.union(c2))
-            if union > 0:  
-                jaccard_values.append(intersection / union)
-    
-    # Return the maximum Jaccard index (best matching)
-    return max(jaccard_values) if jaccard_values else 0.0
+    #if len(union) !=0 else 0
+    return len(overlap)/len(union) 
+def optimal_jaccard(arg1,arg2):
+    #assuming 3 clustesr
+    jaccard_results=[]
+
+    for n in range(3):
+        for l in range(2):
+            df1= arg1.copy()
+            df1['id'] = df1.index
+            df1 = pd.DataFrame(df1, columns=['Cluster','id'])
+            df2= arg2.copy()
+            df2['id'] = df2.index
+            df2 = pd.DataFrame(df2, columns=['Cluster','id'])
+            df3=df2.copy()
+            vals = arg1["Cluster"].unique().tolist()
+            vals.sort()
+        #    df2.loc[df2["Cluster"] == 1,"Cluster"] = -101
+         #   df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
+
+           # 
+            df2.loc[df2["Cluster"] == vals[n],"Cluster"] = -100
+
+            vals.pop(n)
+            df2.loc[df2["Cluster"] == vals[l],"Cluster"] = -101
+            vals.pop(l)
+
+            df2.loc[df2["Cluster"] == vals[0],"Cluster"] = -102
+           # print(df2["Cluster"].unique())
+            df2.loc[df2["Cluster"] == -100,"Cluster"] = 0
+            df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
+            df2.loc[df2["Cluster"] == -102,"Cluster"] = 2
+            jaccard_results.append(jaccard_res(df1,df2))
+            # print(df2["Cluster"].unique())
+
+  #  print(jaccard_results)        
+    return max(jaccard_results)
+
+        
 if __name__ == "__main__":
     df = read_preprocessed_data()
     print(df.info())
