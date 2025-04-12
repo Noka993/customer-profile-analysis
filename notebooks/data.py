@@ -152,15 +152,13 @@ def remove_outliers(df2):
                 q1 = df2[col].quantile(0.25)
                 q3 = df2[col].quantile(0.75)
                 IQR = q3 - q1
-                upper_bound=(q1 - 1.5 * IQR)
-                lower_bound=(q3 + 1.5 * IQR)
-                upper_limit = df2[col].mean() + 3*df2[col].std()
-                lower_limit = df2[col].mean() - 3*df2[col].std()
+                upper_bound=(q3 + 1.5 * IQR)
+                lower_bound=(q1 - 1.5 * IQR)
                 outliers_percentage = outliers_percentages.iloc[1,i]
                 if outliers_percentage < 0.05:
-                    df[col] = df[col].where(~((df[col] < (q1 - 1.5 * IQR)) | ( df[col] > (q3 + 1.5 * IQR))))
+                    df[col] = df[col].where(~((df[col] < lower_bound) | ( df[col] > upper_bound)))
                 else:
-                    df[col] = df[col].clip(lower=lower_limit,upper=upper_limit)
+                    df[col] = df[col].clip(lower=lower_bound,upper=upper_bound)
     cleaned_df=df.dropna()
 
     return cleaned_df
@@ -194,42 +192,55 @@ def jaccard_res(df1,df2):
     
     #if len(union) !=0 else 0
     return len(overlap)/len(union) 
-def optimal_jaccard(arg1,arg2):
-    #assuming 3 clustesr
+def optimal_jaccard(arg1,arg2,result=True):
+    #assuming 4 clustesr
     jaccard_results=[]
-
-    for n in range(3):
-        for l in range(2):
-            df1= arg1.copy()
-            df1['id'] = df1.index
-            df1 = pd.DataFrame(df1, columns=['Cluster','id'])
-            df2= arg2.copy()
-            df2['id'] = df2.index
-            df2 = pd.DataFrame(df2, columns=['Cluster','id'])
-            df3=df2.copy()
-            vals = arg1["Cluster"].unique().tolist()
-            vals.sort()
-        #    df2.loc[df2["Cluster"] == 1,"Cluster"] = -101
-         #   df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
-
-           # 
-            df2.loc[df2["Cluster"] == vals[n],"Cluster"] = -100
-
-            vals.pop(n)
-            df2.loc[df2["Cluster"] == vals[l],"Cluster"] = -101
-            vals.pop(l)
-
-            df2.loc[df2["Cluster"] == vals[0],"Cluster"] = -102
-           # print(df2["Cluster"].unique())
-            df2.loc[df2["Cluster"] == -100,"Cluster"] = 0
-            df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
-            df2.loc[df2["Cluster"] == -102,"Cluster"] = 2
-            jaccard_results.append(jaccard_res(df1,df2))
+    jaccard_replacements=[]
+    for n in range(4):
+        for l in range(3):
+            for k in range(2):
+                temp=""
+                df1= arg1.copy()
+                df1['id'] = df1.index
+                df1 = pd.DataFrame(df1, columns=['Cluster','id'])
+                df2= arg2.copy()
+                df2['id'] = df2.index
+                df2 = pd.DataFrame(df2, columns=['Cluster','id'])
+                df3=df2.copy()
+                vals = arg1["Cluster"].unique().tolist()
+                vals.sort()
+            #    df2.loc[df2["Cluster"] == 1,"Cluster"] = -101
+             #   df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
+    
+               # 
+                temp+= "0: " + str(vals[n])  
+                df2.loc[df2["Cluster"] == vals[n],"Cluster"] = -100
+    
+                vals.pop(n)
+                df2.loc[df2["Cluster"] == vals[l],"Cluster"] = -101
+                temp+= "   1: " + str(vals[l])  
+                vals.pop(l)
+    
+                df2.loc[df2["Cluster"] == vals[k],"Cluster"] = -102
+                temp+= "   2: " + str(vals[k]) 
+                vals.pop(k)
+                df2.loc[df2["Cluster"] == vals[0],"Cluster"] = -103
+                temp+= "   3: " + str(vals[0]) 
+                # print(df2["Cluster"].unique())
+                df2.loc[df2["Cluster"] == -100,"Cluster"] = 0
+                df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
+                df2.loc[df2["Cluster"] == -102,"Cluster"] = 2
+                df2.loc[df2["Cluster"] == -103,"Cluster"] = 3
+                jaccard_results.append(jaccard_res(df1,df2))
+                jaccard_replacements.append(temp)
             # print(df2["Cluster"].unique())
-
+   # print(jaccard_results.index(max(jaccard_results)))
   #  print(jaccard_results)        
-    return max(jaccard_results)
-
+#    print(len(jaccard_results))
+    if(result):
+        return max(jaccard_results)
+    
+    return jaccard_replacements[jaccard_results.index(max(jaccard_results))]
         
 if __name__ == "__main__":
     df = read_preprocessed_data()
