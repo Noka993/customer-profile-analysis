@@ -152,15 +152,13 @@ def remove_outliers(df2):
                 q1 = df2[col].quantile(0.25)
                 q3 = df2[col].quantile(0.75)
                 IQR = q3 - q1
-                upper_bound=(q1 - 1.5 * IQR)
-                lower_bound=(q3 + 1.5 * IQR)
-                upper_limit = df2[col].mean() + 3*df2[col].std()
-                lower_limit = df2[col].mean() - 3*df2[col].std()
+                upper_bound=(q3 + 1.5 * IQR)
+                lower_bound=(q1 - 1.5 * IQR)
                 outliers_percentage = outliers_percentages.iloc[1,i]
                 if outliers_percentage < 0.05:
-                    df[col] = df[col].where(~((df[col] < (q1 - 1.5 * IQR)) | ( df[col] > (q3 + 1.5 * IQR))))
+                    df[col] = df[col].where(~((df[col] < lower_bound) | ( df[col] > upper_bound)))
                 else:
-                    df[col] = df[col].clip(lower=lower_limit,upper=upper_limit)
+                    df[col] = df[col].clip(lower=lower_bound,upper=upper_bound)
     cleaned_df=df.dropna()
 
     return cleaned_df
