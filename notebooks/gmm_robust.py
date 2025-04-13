@@ -14,7 +14,7 @@ n_clusters = [3, 4]
 
 for n in n_clusters:
     # Read the preprocessed data
-    data_scaled = read_preprocessed_data(std=False, robust=True, gmm=True, le=False, he=True)
+    data_scaled = read_preprocessed_data(std=False, robust=True, gmm=True)
 
     # Perform GMM clustering
     data_scaled, gmm_model = perform_gmm_clustering(n_clusters=n, data_scaled=data_scaled)

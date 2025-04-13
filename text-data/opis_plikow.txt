@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+\title{Opis Implementacji Algorytmów Klasteryzacji}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Plik data.py}
+\begin{itemize}[leftmargin=*]
+\item Główny moduł pomocniczy zawierający wspólne funkcje dla wszystkich implementacji metod analizy skupień
+\item Dostarcza narzędzia do:
+\begin{itemize}
+\item Wczytywania i preprocessingu danych
+\item Transformacji i skalowania (StandardScaler, MinMaxScaler, RobustScaler)
+\item Usuwania wartości odstających
+\item Redukcji wymiarowości i wizualizacji (PCA, t-SNE)
+\item Przekształcenia zmiennych kategorycznych na numeryczne
+\item Wizualizacji wyników
+\item Oceny jakości klastrów
+\end{itemize}
+\end{itemize}
+
+\section*{Implementacje Gaussian Mixture Models}
+
+\subsection*{gmm.py}
+\begin{itemize}[leftmargin=*]
+\item Implementacja rozwiązania GMM wykorzystująca standaryzację
+\item Wizualizuje wyniki klastrowanania dla 3 i 4 klastrów
+\end{itemize}
+
+\subsection*{gmm\_robust.py}
+\begin{itemize}[leftmargin=*]
+\item Wersja GMM z RobustScaler dla 3 i 4 klastrów
+\item Specjalizacja dla danych z outlierami, odporne skalowanie
+\end{itemize}
+
+\subsection*{gmm\_minmax.py}
+\begin{itemize}[leftmargin=*]
+\item Wariant z MinMaxScaler dla 3 i 4 klastrów
+\end{itemize}
+
+\section*{Pliki implementujące K-Means}
+
+\subsection*{kmeans.py}
+\begin{itemize}[leftmargin=*]
+\item Podstawowa implementacja algorytmu K-Means dla 3 i 4 klastrów
+\item Wykorzystuje standaryzację danych
+\end{itemize}
+
+\subsection*{kmeans\_robust.py}
+\begin{itemize}[leftmargin=*]
+\item Wersja K-Means z RobustScaler dla 4 klastrów
+\item Przetwarzanie danych odpornych na outliery
+\end{itemize}
+
+\subsection*{kmeans\_minmax.py}
+\begin{itemize}[leftmargin=*]
+\item Implementacja K-Means z MinMaxScaler dla 3 klastrów
+\end{itemize}
+
+\section*{Pozostałe pliki pomocnicze}
+
+\subsection*{standaryzacja.py}
+\begin{itemize}[leftmargin=*]
+\item Narzędzia do analizy skutków standaryzacji
+\item Generuje:
+\begin{itemize}
+\item Statystyki opisowe danych
+\item Wykresy rozkładu przed/po standaryzacji
+\item Analizę wartości odstających
+\end{itemize}
+\end{itemize}
+
+\subsection*{wizualizacja.py}
+\begin{itemize}[leftmargin=*]
+\item Biblioteka funkcji wizualizacyjnych
+\item Zawiera implementacje:
+\begin{itemize}
+\item Histogramów dla zmiennych ciągłych
+\item Wykresów kołowych dla danych kategorycznych
+\item Wykresów pudełkowych
+\end{itemize}
+\end{itemize}
+
+\end{document}
