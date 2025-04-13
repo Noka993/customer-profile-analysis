@@ -496,13 +496,17 @@ def print_pca_variance(pca):
     print("PCA2: ", round(pca.explained_variance_ratio_[1], 2))
     print("Suma wyjaśnionej wariancji: ", round(pca.explained_variance_ratio_.sum(), 2))
 
+
 def perform_gmm_clustering(n_clusters, data_scaled):
     """
     Perform Gaussian Mixture Model clustering and return the data with clusters.
     """
-    gmm = GaussianMixture(n_components=n_clusters, covariance_type='tied', random_state=42)
-    data_scaled['Cluster'] = gmm.fit_predict(data_scaled)
+    gmm = GaussianMixture(
+        n_components=n_clusters, covariance_type="tied", random_state=42
+    )
+    data_scaled["Cluster"] = gmm.fit_predict(data_scaled)
     return data_scaled, gmm
+
 
 if __name__ == "__main__":
     df = read_preprocessed_data()
