@@ -235,7 +235,6 @@ def jaccard_res(df1, df2):
 
 
 def optimal_jaccard(arg1, arg2, result=True):
-    # assuming 4 clustesr
     jaccard_results = []
     jaccard_replacements = []
     for n in range(4):
@@ -251,10 +250,6 @@ def optimal_jaccard(arg1, arg2, result=True):
                 df3 = df2.copy()
                 vals = arg1["Cluster"].unique().tolist()
                 vals.sort()
-                #    df2.loc[df2["Cluster"] == 1,"Cluster"] = -101
-                #   df2.loc[df2["Cluster"] == -101,"Cluster"] = 1
-
-                #
                 temp += "0: " + str(vals[n])
                 df2.loc[df2["Cluster"] == vals[n], "Cluster"] = -100
 
@@ -275,10 +270,6 @@ def optimal_jaccard(arg1, arg2, result=True):
                 df2.loc[df2["Cluster"] == -103, "Cluster"] = 3
                 jaccard_results.append(jaccard_res(df1, df2))
                 jaccard_replacements.append(temp)
-            # print(df2["Cluster"].unique())
-    # print(jaccard_results.index(max(jaccard_results)))
-    #  print(jaccard_results)
-    #    print(len(jaccard_results))
     if result:
         return max(jaccard_results)
 
